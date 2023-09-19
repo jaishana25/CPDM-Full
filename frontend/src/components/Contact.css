@@ -1,0 +1,122 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+    margin: 30px;
+    }
+    
+    .div1 {
+         grid-area: 1 / 1 / 3 / 4; 
+         background-color: #CBF4F8;
+         border-radius: 20px;
+         text-align: justify;
+         padding: 20px;
+         font-family: 'Poppins', sans-serif;
+         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    .div2 { 
+        grid-area: 3 / 1 / 5 / 4; 
+        background-color:  #CBF4F8;
+        border-radius: 20px;
+        text-align: left;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    
+    }
+    .div3 { 
+        grid-area: 1 / 4 / 4 / 8; 
+        background-color:  #cbf4f800;
+        border-radius: 20px;
+        padding:0;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .div4 { 
+        grid-area: 4 / 4 / 6 / 8; 
+        background-color:  #CBF4F8;
+        border-radius: 20px;
+        text-align: left;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 760px) {
+        .parent {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+        }
+      
+        .div1 {
+          grid-area: auto;
+        }
+      
+        .div2 {
+          grid-area: auto;
+        }
+      
+        .div3 {
+          grid-area: auto;
+        }
+      
+        .div4 {
+          grid-area: auto;
+        }
+      }
+      
+      @media (min-width: 960px) {
+        .parent {
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+        }
+      
+        .div1 {
+          grid-area: 1 / 1 / 3 / 4;
+        }
+      
+        .div2 {
+          grid-area: 3 / 1 / 5 / 4;
+        }
+      
+        .div3 {
+          grid-area: 1 / 4 / 4 / 8;
+        }
+      
+        .div4 {
+          grid-area: 4 / 4 / 6 / 8;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .parent {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+        }
+      
+        .div1 {
+          grid-area: auto;
+        }
+      
+        .div2 {
+          grid-area: auto;
+        }
+      
+        .div3 {
+          grid-area: auto;
+        }
+      
+        .div4 {
+          grid-area: auto;
+        }
+      }
+      
+      .icons{
+        padding: 0;
+        margin:0;
+      }
+      .text-with-gap {
+        margin-left: 10px; /* Adjust the gap as per your requirement */
+      }
+  

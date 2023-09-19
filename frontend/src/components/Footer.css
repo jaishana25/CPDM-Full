@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.501);
+  padding: 60px 0px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer2 {
+  color: aliceblue;
+  background-color: black;
+  height: 30px;
+  padding: 0;
+}
+
+.footer ul {
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+.footer li {
+  margin-bottom: 30px;
+}
+
+.footer li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container2 {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.logo {
+  width: 90px;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.socialmedia img {
+  width: 70%;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.footer-col:nth-child(2) ul li {
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+
+}
+.footer-col:nth-child(1) ul li {
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+
+}
+
+
+.footer-col:nth-child(3) ul li {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-left:10px;
+  margin-right:  auto;
+}
+
+
+.footer-col:nth-child(3) ul li img
+{
+  margin-left:  auto;
+  display: flex;
+  justify-content: flex-end;
+
+
+}
+
+
+
+.footer-col:nth-child(1) ul li {
+    line-height: 1.5;
+  }
+  
+  .iiscclogo{
+    margin-top:80px;
+    margin-right:20px;
+  }
+  .google-map-iframe {
+    border: 0;
+    border-radius: 20px; /* Change the border radius value as desired */
+  }
+  .sclogo {
+    width: 60px;
+   
+    margin-right:10px;
+  }
+  .white-link {
+    color: white;
+    /* Add any additional styling you need */
+  }
+
+  .logo-containers {
+    display: flex;
+    align-items: center;
+  }
+
+ .oclogo{
+  margin-left:100px;
+ }

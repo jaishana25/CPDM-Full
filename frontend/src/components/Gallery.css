@@ -1,0 +1,125 @@
+
+.phd-text3{
+    margin-top:5px;
+    text-align: left;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 600;
+    padding-left: 2vw;
+   
+  }
+  .containerr {
+    padding: 20px 50px;
+    border-radius: 50px;
+    max-width: 1200px; /* Adjust the width as per your desired size */
+    margin: 0 auto; /* Center the carousel horizontally */
+    
+/* Add padding to the left and right sides */
+  }
+  .cardd {
+    margin: 40px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    
+    width: 200px;
+    height:300px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 100px;
+    
+/* Add margin to the left and right sides of each card */
+  }
+  
+  .slick-track {
+    margin: 10 -40px; /* Add negative margin to create a gap between the cards */
+  }
+  
+  .gridg{
+  
+    padding:16px;
+    grid-gap:0px;
+    display:grid;
+
+    @media (min-width: 760px){
+        display:grid;
+        
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    @media (min-width: 960px){
+        display:grid;
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    @media (min-width: 1200px){
+        display:grid;
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .coll{
+        background-color: white;
+        margin-bottom:40px;
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-top: 20px;
+        padding:20px;
+        border-radius: 40px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .imagehold{
+    height: 15vw;
+    width:auto;
+    border-radius: 20px;
+  }
+
+  .see-more {
+    float: right; /* Position the "see more" text on the right side */
+    font-size: 1.2vw; /* Adjust the font size as desired */
+    color: #7075ff;
+    margin-right: 3vw; /* Set the color for the "see more" text */
+    /* Add any additional styling you want for the "see more" text */
+  }
+
+
+  .custom-arrow {
+    font-size: 30px; /* Adjust the font size to change the size of the icons */
+    color: #000;
+    margin-right:30px; /* Customize the color of the icons */
+  }
+
+  .containerr .control-arrow {
+    opacity: 1;
+    background-color: #7075ff;
+  }
+
+  .carousel .control-arrow {
+    font-size: 100px; /* You can adjust the size as per your preference */
+  }
+
+  .containerr .carousel .control-arrow {
+    font-size: 30px;
+    line-height: 30px;
+    color: #000;
+  }
+
+  /* Increase the size of the default arrows */
+.carousel .control-arrow {
+   size: 100px; /* Hide the default arrows since we are using custom arrows */
+  }
+  
+  /* Move the custom arrows to the left and right */
+  .carousel:hover .thumbs-wrapper button {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  
+  
+  

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.grid5 {
+    display:block;
+    padding: 10px;
+  }
+  
+  .col5 {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 60px;
+    padding: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 50px;
+    border-radius: 30px;
+
+  }
+  
+ .productimg{
+    height:10vw;
+    width:20vw;
+    border-radius: 20px ;
+    
+ }
+ .productimg img{
+    border-radius: 20px;
+ }
+  
+ .prodname{
+    padding-left: 4vw;
+    padding-top: 4vw;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight:800;
+ }
+
+
+  .wraperr{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+  }
+
+  .collapsible{
+     max-width: calc(100% - 80px); 
+     height: auto;
+    overflow: hidden;
+    font-weight:500 ;
+  }
+  .collapsible label{
+    position: relative;
+    font-weight: 800;
+    background-color: white;
+    box-shadow: black;
+    color:rgb(0, 0, 0);
+    display: flex;
+    margin-bottom: 6px;
+    cursor:pointer;
+ 
+    border-radius: 30px;
+    margin-left: 80px;
+    max-width: calc(100% - 80px); 
+    height:auto;
+   
+    text-align: left;
+    padding: 25px;
+
+ 
+   max-height: 400px;
+   min-height: 5vw;
+
+  
+  }
+ 
+
+  .collapsible input{
+    display:none;
+
+  }
+  .collapsible input:checked + label:after{
+    transform:rotate(-180deg);
+    
+
+  }
+
+  .collapsible label:after{
+    content:"";
+    position: absolute;
+    right:15px;
+    top:15px;
+    width:100px;
+    height:100px;
+    background:url(images/arrow.png)no-repeat 0 0 ;
+    transition: all 0.3s ease;
+ 
+    
+ 
+
+  }
+ 
+  
+  
+
+  .collapsible-text{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top:-100%;
+    opacity:0.5;
+    transition: all 0.3s ease;
+    align-items: left;
+    text-align: left;
+    max-width: calc(100% - 70px); 
+    height:auto;
+  }
+
+
+
+  .collapsible  input:checked ~ .collapsible-text{
+    max-height: 400px;
+    padding-bottom: 25px;
+    background: white;
+    padding: 40px 0;
+    border-radius: 30px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+ 
+    padding: 25px;
+    opacity:1;
+    top:0;
+
+  }
+
+.collapsible-text h2{
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color:blue;
+    
+}
+
+.collapsible-text p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.grid6{
+  
+  padding:12px;
+  grid-gap:0px;
+  display:grid;
+
+  @media (min-width: 760px){
+      display:grid;
+      
+      grid-template-columns: repeat(2,1fr);
+  }
+
+
+  @media (min-width: 960px){
+      display:grid;
+      
+      grid-template-columns: repeat(2,1fr);
+  }
+
+  @media (min-width: 1200px){
+      display:grid;
+      
+      grid-template-columns: repeat(3,1fr);
+  }
+
+  .col6{
+      background-color: #FDE4CF;
+      margin-bottom:40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      padding:20px;
+      border-radius: 30px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.col6 p{
+  text-align: left;
+  margin-right: 10px;
+}
+
+.col6 img{
+width:100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}

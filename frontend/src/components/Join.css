@@ -1,0 +1,63 @@
+.details{
+
+    max-width: calc(100% - 70px); /* Adjust the subtracted value (40px) as needed */
+    width: auto;
+    margin-right:50px; /* Adjust the padding as needed */
+    box-sizing: border-box;
+   margin-left:40px;
+  margin-bottom: 80px;
+    
+    height: 400px;
+  
+
+
+    border-radius: 40px;
+    background: linear-gradient(133deg, rgba(64, 123, 255, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+;
+   
+}
+
+.form{
+    background-color: white;
+    height:1300px;
+    max-width: calc(100% - 70px); /* Adjust the subtracted value (40px) as needed */
+    width: auto;
+    box-sizing: border-box;
+   margin-left:40px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+   margin-top: 40px;
+}
+
+.google-form-container {
+    width: 800px;
+    height: 1200px;
+    margin-top: 40px;
+    position: relative;
+    overflow:hidden
+  /* Set the aspect ratio for responsive resizing (16:9 in this example) */
+  
+  }
+  .body{
+    min-height: 500px;
+}
+.grid2{
+    display:block;
+    padding:20px;
+    grid-template-columns: 1fr;
+
+
+    .col2{
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top:10px;
+        border-radius: 20px;
+        display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+        
+    }
+}
