@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Journal
-from .models import Conference,Patent,Designs,Sponsored,Research,Person
+from .models import *
 
 
 class JournalSerializer(serializers.ModelSerializer):
@@ -39,3 +39,22 @@ class PersonSerializer(serializers.ModelSerializer):
         model = Person
         fields = ['id', 'pname','pmail','link','ppic','student_type']
 
+class AboutSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = About
+        fields = '__all__'
+
+class ResearchInterestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ResearchInterest
+        fields = '__all__'
+
+class PersonalInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PersonalInfo
+        fields = '__all__'
+
+class PublicationsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publications
+        fields = '__all__'

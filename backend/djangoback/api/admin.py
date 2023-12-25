@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from .models import Journal,Conference,Patent,Designs,Sponsored,Research,Person
+from .models import *
 # Register your models here.
 @admin.register(Journal)
 class JournalAdmin (admin.ModelAdmin):
@@ -43,3 +43,8 @@ class PersonAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.URLField: {'required': False},
     }
+
+admin.site.register(PersonalInfo)
+admin.site.register(ResearchInterest)
+admin.site.register(About)
+admin.site.register(Publications)

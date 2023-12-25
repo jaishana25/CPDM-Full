@@ -9,4 +9,5 @@ urlpatterns=[
     path('sponsored/',views.SponsoredList.as_view()),
     path('research/',views.ResearchList.as_view()),
     path('person/',views.PersonList.as_view()),
+    path('person/details/<int:id>/', views.PersonDetails.as_view()),
 ]

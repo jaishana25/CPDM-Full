@@ -8,11 +8,22 @@ import phone from './images/phone.png';
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Link } from 'react-router-dom'; 
 
 
 function People() { 
   const [personData, setPersonData] = useState([]);
+
+  const renderBulletPoints = (pname) => {
+    const names = pname.split('|');
+    return (
+      <ul>
+        {names.map((name, index) => (
+          <li key={index}>{name.trim()}</li>
+        ))}
+      </ul>
+    );
+  };
   
   useEffect(() => {
     async function fetchPeopleData() {
@@ -108,10 +119,10 @@ function People() {
       
       {phdStudents.map((student, index) => (
           <div className="col" key={index}>
-            <a href="card-details">
+            <a href={`/card-details/${student.id}`}>
               <img src={student.ppic} alt="" className="img2" />
               <div className='card-content'>
-            <h3>{student.pname}</h3>
+              <h3>{renderBulletPoints(student.pname)}</h3>
             <p>
             <img src={Email} alt="mail" className='cardicon'/>:  {student.pmail}
             </p>
@@ -121,7 +132,7 @@ function People() {
              </div>
           
 
-            </a>
+             </a>
             <a href={student.link}>
              <img src={Linkedin} alt=""  className="linked-image" style={{ width: '30px', height: '30px' }}/>
              </a>

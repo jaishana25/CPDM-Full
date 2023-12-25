@@ -67,7 +67,7 @@ function Footer() {
    
    </footer>
    <footer className="footer2">
-     <small className="footertext">SCALE LAB-CPDM-IISC @2023. All rights reserved. Website Designed,Developed and Maintained by  <a href="https://www.linkedin.com/in/jaishana-bindhu-priya-636130228/" className="white-link">Jaishana Bindhu Priya </a>and   <a href="https://www.linkedin.com/in/jaishana-bindhu-priya-636130228/" className="white-link">Sankar </a></small>
+     <small className="footertext">SCALE LAB-CPDM-IISC @2023. All rights reserved. Website Designed,Developed and Maintained by  <a href="https://www.linkedin.com/in/jaishana-bindhu-priya-636130228/" className="white-link"> x </a>and   <a href="https://www.linkedin.com/in/jaishana-bindhu-priya-636130228/" className="white-link">Sankar </a></small>
 
    </footer></div>
   )

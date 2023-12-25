@@ -37,7 +37,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/join" element={<Join/>}/>
-        <Route path="/card-details" element={<CardDetails/>} />
+        <Route path="/card-details/:id" element={<CardDetails/>} />
      
         <Route path="/journal" element={<Journal/>}/>
  

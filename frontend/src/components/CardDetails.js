@@ -5,14 +5,38 @@ import linkedgrey from './images/linkedgrey.png';
 import Linkedin from './images/Linkedin.png';
 import Email from './images/Email.png';
 import phone from './images/phone.png';
+import { useEffect } from "react";
+import axios from "axios";
+import { useParams } from 'react-router-dom';
+
 
 function CardDetails() {
+  const { id } = useParams();
+  console.log(id)
   const [activeContent, setActiveContent] = useState('about');
+  
+  const [personData, setPersonData] = useState({});
+
+  useEffect(() => {
+    async function fetchPersonData() {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/person/details/' + id + '/'); // Replace with your API endpoint
+        console.log(response.data);
+        setPersonData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchPersonData();
+  }, [id]);
+
 
   const handleContentChange = (section) => {
     setActiveContent(section);
   };
 
+  
   return (
     <div className='body'>
       <div className='lines-container'>
@@ -58,28 +82,21 @@ function CardDetails() {
       </div>
       <div className='gridd'>
         <div className='coli'>
-          <a href="prof">
-        <div className='img2'>
-        <img src={Profu} alt='Card Image' />
-              
-            </div>
-            <div className='card-content'>
-            <h3>Name</h3>
-            <p>
-            <img src={Email} alt="mail" className='cardicon'/>:  dibakar@iisc.ac.in 
-            </p>
-            <p>
-            <img src={phone} alt="ph" className='cardicon'/>:   +91 80 2293 3230 
-            </p>
-            
-             </div>
-             </a>
 
+        <img src= {'http://127.0.0.1:8000' + personData.ppic} alt="" className="img2" />
+            <div className='card-content'>
+              <h3>{personData.pname}</h3>
+              <p>
+                <img src={Email} alt="mail" className='cardicon'/>: {personData.pmail}
+              </p>
+              <a href={personData.link}>
+                <img src={Linkedin} alt="" className="linked-image" style={{ width: '30px', height: '30px' }}/>
+              </a>
+            </div>
+          
+          
+      
              
-            
-<a href="https://www.linkedin.com/in/dibakar-sen-9387b534/">
-             <img src={Linkedin} alt="" className="linked-image"/>
-             </a>
 
 
          
