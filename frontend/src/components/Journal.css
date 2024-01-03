@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap');
 .body{
     min-height: 500px;
 }
@@ -26,6 +27,8 @@
     }
 }
 
+
+
   .cot{
     font-family: 'Poppins', sans-serif;
     text-align: left;
@@ -41,4 +44,57 @@
 
   .cot a{
     color:blue;
+  }
+
+  .col-left span{
+    font-family: 'Kanit';
+    
+  }
+
+  .l1{
+    margin-right: 54px;
+  }
+  .l2{
+    margin-right: 45px;
+  }
+  .l3{
+    margin-right: 68px;
+  }
+  .l4{
+    margin-right: 2px;
+  }
+  .l5{
+    margin-right: 93px;
+  }
+  .l6{
+    margin-right:140px;
+  }
+  .l7{
+    margin-right: 115px;
+  }
+  .l8{
+    margin-right: 2px;
+  }
+  .l9{
+    margin-right: 0px;
+  }
+  .l10{
+    margin-right: 118px;
+  }
+
+
+  .l11{
+    margin-right: 83px;
+  }
+  .l12{
+    margin-right: 75px;
+  }
+  .l13{
+    margin-right: 0px;
+  }
+  .l14{
+    margin-right: 33px;
+  }
+  .l15{
+    margin-right: 120px;
   }

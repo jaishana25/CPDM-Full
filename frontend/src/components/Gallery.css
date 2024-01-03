@@ -122,4 +122,38 @@
   
   
   
-  
+  .lines-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0vh;
+  }
+  .grid3{
+    display:block;
+    padding:20px;
+    grid-template-columns: 1fr;
+
+
+    .col3{
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 30px;
+        margin-left: 30px;
+        margin-right: 10px;
+        margin-top:10px;
+        border-radius: 20px;
+        display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  text-align: left;
+        
+    }
+}
+
+.prodnamee{
+  padding-left: 2vw;
+  padding-top: 1vw;
+  font-size: 1.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+}

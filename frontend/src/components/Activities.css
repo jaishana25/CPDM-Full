@@ -15,13 +15,15 @@
     margin-right: 60px;
     margin-top: 50px;
     border-radius: 30px;
+    ;
 
   }
   
  .productimg{
-    height:10vw;
+    height:30vw;
     width:20vw;
     border-radius: 20px ;
+    border-radius: 20px;
     
  }
  .productimg img{
@@ -56,7 +58,7 @@
     box-shadow: black;
     color:rgb(0, 0, 0);
     display: flex;
-    margin-bottom: 6px;
+    margin-bottom: 30px;
     cursor:pointer;
  
     border-radius: 30px;

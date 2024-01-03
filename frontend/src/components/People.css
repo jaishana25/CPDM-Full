@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap');
 
 .lines-container {
     display: flex;
@@ -15,7 +15,14 @@
      /* Adjust the spacing between the lines */
   }
   
-
+  .now-row {
+    clear: both;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .next-row {
+    margin-right: 20px; /* Adjust as needed */
+  }
   .body {
     margin-top:80px; /* Adjust the value as needed */
     padding: 0;
@@ -32,18 +39,21 @@
     /* /* Adjust the padding as needed */
   }
   
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    overflow: hidden;
-    width: 300px;
-    height:430px;
-    background-color: white;
-    margin-top: 20px;
-    margin-left: 30px;
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.37);/* Add margin to create spacing between cards */
+  
+
+  .socialss{
+    position: absolute;
+    bottom:14px;
+    right:5px;
+    left:5px;
+    
+    width:100%;
+    display: flex;
+    justify-content:space-around;
+
   }
   
+ 
   .image-holder {
     overflow: hidden;
 
@@ -59,6 +69,7 @@
   
   .card-content {
     padding: 20px;
+    padding-bottom: 40px;
   }
   
   .container {
@@ -75,17 +86,29 @@
   
   .colu:nth-child(2) {
     
-    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.268));
+    border-radius: 40px;
+background: linear-gradient(105deg, rgba(255, 255, 255, 0.30) 26.53%, rgba(255, 255, 255, 0.19) 65.34%, rgba(217, 217, 217, 0.00) 129.77%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(50px);
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.824);
+    font-family: 'Poppins', sans-serif;
+    
+  
     width: 60vw;
     border-radius: 30px;
     margin-right:0px;
     margin-left: 40px; 
+    text-align: left;
+    display: flex;
   }
+
+  .colu:nth-child(2) h2{
+    padding-left: 30px;
+  }
+
+  
 
   .colu:nth-child(1){
     background-color: white;
@@ -93,11 +116,12 @@
    
   }
 
-  .colu:nth-child(1):hover{
-    background-color: rgb(208, 208, 208);
-    transition: 0.3s ease-in-out;
-}
+
+.card-content span{
   
+  font-family: 'Kanit';
+  font-weight: 600;
+}
 
   .grid{
   
@@ -125,6 +149,7 @@
     }
 
     .col{
+
         background-color: white;
         margin-bottom:40px;
         margin-left: 30px;
@@ -134,7 +159,22 @@
         border-radius: 40px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
         font-family: 'Poppins', sans-serif;
+        position: relative;
     }
+
+    .colp{
+
+      background-color: white;
+      margin-bottom:40px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 20px;
+      padding:20px;
+      border-radius: 40px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+  }
   }
 
   .phd-text2{
@@ -173,7 +213,8 @@
 }
 
 .col p{
-  font-size: 1.2vw;
+  font-size: 1.3vw;
+  text-align: left;
 }
 
 .col:hover{
@@ -182,9 +223,7 @@
 }
 
 
-.col:hover img.linked-img {
-    filter: hue-rotate(180deg);
-  }
+
 .gridd{
   padding:16px;
   grid-gap:0px;
@@ -234,6 +273,9 @@
   text-decoration: none;
 }
 
+.card-content p{
+  font-size: 0.98rem;
+}
 
 .colu a{
   text-decoration: none;
@@ -244,8 +286,64 @@
 }
 
 .cardicon{
-  height:2vw;
-  width:2vw;
-  align-items: left;
-  float: left;
+  height:2.3vw;
+  width:2.3vw;
+  
+
+
+
 }
+.cardicon2{
+  height:2.3vw;
+  width:2.3vw;
+  padding-right: 5px;
+  padding-top: 20px;
+  
+
+
+
+}
+/* .github{
+  padding-right: 20px;
+}
+.behance{
+  padding-left: 20px;
+} */
+
+.email-container {
+  position: relative;
+}
+
+.email-text {
+  display: none;
+  position: absolute;
+   /* Adjust as needed for positioning */
+  left: 0;
+  background-color: #fff; /* Adjust background color as desired */
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.email-container:hover .email-text {
+  display: block;
+}
+.lline{
+  height:1px;
+  background-color: black;
+  margin: 10px 0;
+  width:30vw;
+}
+
+.colu:nth-child(2) .firstcol{
+  flex:1;
+  padding-right: 20px;
+}
+
+.colu:nth-child(2) .secondcol{
+  flex:1;
+  
+  
+}
+

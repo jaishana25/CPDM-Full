@@ -8,10 +8,17 @@ from rest_framework import status
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 # Create your views here.
 class JournalList(ListAPIView):
     queryset = Journal.objects.all()
     serializer_class = JournalSerializer
+class EventsList(ListAPIView):
+    queryset = Events.objects.all()
+    serializer_class = EventsSerializer
+class NewsList(ListAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
 class ConferenceList(ListAPIView):
     queryset = Conference.objects.all()
     serializer_class = ConferenceSerializer
@@ -27,9 +34,18 @@ class SponsoredList(ListAPIView):
 class ResearchList(ListAPIView):
     queryset = Research.objects.all()
     serializer_class = ResearchSerializer
-class PersonList(ListAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializer
+class JoinList(ListAPIView):
+    queryset = Join.objects.all()
+    serializer_class = JoinSerializer
+
+
+# This Class is 
+class PersonListView(APIView):
+    def get(self, request):
+        queryset = Person.objects.all().order_by('-startYear', '-startMonth')
+        serializer = PersonSerializer(queryset, many=True)
+
+        return Response(serializer.data)
 
 class PersonDetails(APIView):
     def get(self, request, id):

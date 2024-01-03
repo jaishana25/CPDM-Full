@@ -1,0 +1,249 @@
+
+.productimg2{
+    height:23vw;
+    width:23vw;
+    border-radius: 20px ;
+    border-radius: 20px;
+    width:100%;
+    max-width:100%;
+    
+ }
+ .productimg img{
+    border-radius: 40px;
+ }
+  
+ .prodname2{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+   
+ }
+
+
+  .wraperr{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+  }
+
+  .collapsible2{
+     max-width: calc(100% - 80px); 
+     height: auto;
+    overflow: hidden;
+    font-weight:500 ;
+    display: flex;
+  flex-direction: column;
+  min-height:300px;
+  }
+
+  .grid10{
+  
+    padding:10px;
+    grid-gap:0px;
+    display:grid;
+    padding-left: 30px;
+
+    @media (min-width: 760px){
+        display:grid;
+        
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    @media (min-width: 960px){
+        display:grid;
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    @media (min-width: 1200px){
+        display:grid;
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .col10{
+
+      padding-left: 10px;
+      padding-right: 10px;
+        margin-bottom:40px;
+   
+        margin-top: 20px;
+     
+        border-radius: 40px;
+       
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        display: flex;
+        padding-top: 20px;
+        justify-content: center;
+        margin-bottom: 20px; 
+    }
+
+  }
+  .col10 label{
+    position: relative;
+    font-weight: 800;
+    background-color: white;
+    box-shadow: black;
+    color:rgb(0, 0, 0);
+    display: flex;
+    margin-bottom: 30px;
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+ 
+    border-radius: 30px;
+    
+  
+    height:29rem;
+   
+    text-align: center;
+    padding: 25px;
+    width: 23rem;
+
+ 
+   max-height: 450px;
+   min-height: 8vw;
+    /* Set a minimum height for the label */
+  
+
+ 
+
+
+  
+  }
+ 
+
+  .col10 input{
+    display:none;
+
+  }
+  .col10 input:checked + label:after{
+    transform:rotate(-180deg);
+    
+
+  }
+
+  .col10 label:after{
+    content:"";
+    position: absolute;
+    top:28rem;
+    left: 11rem;
+    right:11rem;
+    width:50px;
+    height:50px;
+    background:url(images/arrow.png)no-repeat 0 0 ;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+  flex-direction: column;
+  background-size: contain; 
+ 
+ 
+
+  }
+ 
+  
+  
+
+  .collapsible-text{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top:-100%;
+    opacity:0.5;
+    transition: all 0.3s ease;
+    align-items: left;
+    text-align: left;
+    max-width: calc(100% - 70px); 
+    height:auto;
+  }
+
+
+
+  .col10  input:checked ~ .collapsible-text{
+    max-height: 400px;
+    padding-bottom: 25px;
+    background: white;
+    padding: 40px 0;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+ 
+    padding: 25px;
+    opacity:1;
+    top:0;
+
+  }
+
+.collapsible-text h2{
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color:blue;
+    
+}
+
+.collapsible-text p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.grid6{
+  
+  padding:12px;
+  grid-gap:0px;
+  display:grid;
+
+  @media (min-width: 760px){
+      display:grid;
+      
+      grid-template-columns: repeat(2,1fr);
+  }
+
+
+  @media (min-width: 960px){
+      display:grid;
+      
+      grid-template-columns: repeat(2,1fr);
+  }
+
+  @media (min-width: 1200px){
+      display:grid;
+      
+      grid-template-columns: repeat(3,1fr);
+  }
+
+  .col6{
+      background-color: #FDE4CF;
+      margin-bottom:40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      padding:20px;
+      border-radius: 30px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.col6 p{
+  text-align: left;
+  margin-right: 10px;
+}
+
+.col6 img{
+width:100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}

@@ -8,7 +8,7 @@
         margin: 0;
         padding: 100px;
         min-height: 50vh;
-      
+
       
 }
 
@@ -18,6 +18,7 @@ width:8vw;
 height: 20vw;
 left: 49px;
 top: 191px;
+z-index: 1;
 /* @media screen and (max-width: 768px) {
         width: 80px;
         height: auto;
@@ -64,7 +65,7 @@ top: 191px;
         width: 200px;
         height: 100px;
        margin-top: 2vw;
-       margin-bottom: 5vw;
+       margin-bottom: 1vw;
         
 
         background-color: #FDE4CF; /* Replace with your desired background color */
@@ -88,7 +89,7 @@ top: 191px;
         width: 200px;
         height: 50px;
         right: 4%;
-        bottom:4%;
+        bottom:0;
         background-color: #FDE4CF; /* Replace with your desired background color */
         border-radius: 30px;
   /* Add any other styling properties you need */
@@ -100,6 +101,10 @@ top: 191px;
         font-weight: 700;
         
 }
+.second-box:hover {
+  background-color: #ffac68;  /* Change to your desired hover background color */
+}
+
 
 
 .box2 {
@@ -347,4 +352,13 @@ padding: 30px;
   margin-top:32vw;
   margin-left:2vw;
   height:12rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-center {
+  transform: scale(1.1); /* Optional: Adjust the scale for the centered image */
 }

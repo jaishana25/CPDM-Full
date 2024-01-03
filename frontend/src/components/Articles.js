@@ -1,111 +1,63 @@
-import React from 'react';
-import purak from './images/purak.jpeg'
+// This Program is for on click of "see more" of latest news , that page
+//Author Name: Jaishana Bindhu Priya
+//Last Modified:
+
+//========= Headers
+import React from "react"; //reactjs components
+import { useState, useEffect } from "react"; //reactjs components
+import axios from "axios"; //api to fetch data
+//=========End Headers
 
 function Articles() {
+  const [newsData, setNewsData] = useState([]);
+
+  useEffect(() => {
+    async function fetchNewsData() {
+      try {
+        const response = await axios.get("http://127.0.0.1:8000/api/news/");
+        console.log(response.data);
+        setNewsData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchNewsData();
+  }, []);
+
   return (
-    <div className='body'>
-          <div className='lines-container'>
-        <div className='line'></div>
-        {/* Adjust the width as per your desired space */}
-        <div className='line'></div>
-        </div>
+    <div className="body">
+      {/* =====================has list of every news with image and expandable details section========================= */}
+      <div className="lines-container">
+        <div className="line"></div>
 
-        <p className='phd-text2'>Latest News</p>
-        <div className='lines-container'>
-        <div className='line'></div>
+        <div className="line"></div>
       </div>
-      <div className='wrapperr'>
-         <div className='collapsible'>
-           <input type="checkbox" id="collapsible-head"/>
-           <label for="collapsible-head" > <img src={purak} alt="pur" className='productimg' /><p className='prodname'>Dialisys Chair </p>  </label>
-          
-  
-          
-       <div className='collapsible-text'>
-         <h2>collapsible headin</h2>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenatis s Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenati </p>
-       
-       </div>
-     </div>
-     <div className='collapsible'>
-           <input type="checkbox" id="collapsible-head2"/>
-           <label for="collapsible-head2"><img src={purak} alt="pur" className='productimg' /><p className='prodname'>Dialisys Chair </p> </label>
-  
-          
-       <div className='collapsible-text'>
-         <h2>collapsible headin</h2>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenatis</p>
-       
-       </div>
-     </div>
-     <div className='collapsible'>
-           <input type="checkbox" id="collapsible-head3"/>
-           <label for="collapsible-head3"><img src={purak} alt="pur" className='productimg' /><p className='prodname'>Dialisys Chair </p> </label>
-  
-          
-       <div className='collapsible-text'>
-         <h2>collapsible headin</h2>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenatis</p>
-       
-       </div>
-     </div>
- 
-   
-    
-   
-     <div className='collapsible'>
-           <input type="checkbox" id="collapsible-head4"/>
-           <label for="collapsible-head4"><img src={purak} alt="pur" className='productimg' /><p className='prodname'>Dialisys Chair </p> </label>
-  
-          
-       <div className='collapsible-text'>
-         <h2>collapsible headin</h2>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenatis</p>
-       
-       </div>
-     </div>
- 
-   
-    
-     <div className='collapsible'>
-    
-           <input type="checkbox" id="collapsible-head5"/>
-           <label for="collapsible-head5"><img src={purak} alt="pur" className='productimg' /><p className='prodname'>Dialisys Chair </p> </label>
-  
-          
-       <div className='collapsible-text'>
-         <h2>collapsible headin</h2>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, mi non feugiat tristique, elit dolor finibus
- metus, eu rhoncus arcu nisi eu est. Mauris sit amet lorem vitae purus lobortis vestibulum. Pellentesque habitant morbi
- tristique senectus et netus et malesuada fames ac turpis egestas. m. Mauris fringilla sem eu erat laoreet
- venenatis</p>
-       
-       </div>
-     </div>
- 
-   
-    
-     </div>
 
-   
-    
+      <p className="phd-text2">Latest News</p>
+      <div className="lines-container">
+        <div className="line"></div>
+      </div>
+{/* gets data from backend regarding latest news, the heading, image and details and displays in list format  */}
+      {newsData.map((entry, index) => (
+        <div className="wrapperr" key={index}>
+          <div className="collapsible">
+            <input type="checkbox" id={`collapsible-head-${index}`} />
+            <label htmlFor={`collapsible-head-${index}`}>
+              <img src={entry.npic} alt={entry.news} className="productimg" />
+              <p className="prodname">{entry.news}</p>
+            </label>
+            <div className="collapsible-text">
+              <p>{entry.ndetails}</p>
+            </div>
+          </div>
+          {/*==========================================================================*/}
+        </div>
+      ))}
+
+      <br />
     </div>
-  )
+  );
 }
 
-export default Articles
+export default Articles;
